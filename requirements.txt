@@ -1,0 +1,10 @@
+streamlit
+pydantic
+pandas
+numpy
+scikit-learn
+yfinance==0.2.44
+matplotlib
+tensorflow
+pandas-ta
+seaborn

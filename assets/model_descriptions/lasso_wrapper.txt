@@ -1,0 +1,18 @@
+
+Lasso regression, or Least Absolute Shrinkage and Selection Operator, is a type of linear regression that includes a regularization term to prevent overfitting and enhance model interpretability. It achieves this by adding a penalty equivalent to the absolute value of the magnitude of coefficients.
+
+The Lasso regression objective function is defined as:
+
+    Minimize: ||y - Xβ||² + λ||β||₁
+
+Here:
+- y is the dependent variable,
+- X is the matrix of independent variables,
+- β represents the coefficients of the model,
+- λ (lambda) is the regularization parameter that controls the strength of the penalty,
+- ||.||² denotes the L2 norm (sum of squares),
+- ||.||₁ denotes the L1 norm (sum of absolute values).
+
+The L1 penalty in Lasso regression encourages sparsity in the coefficient estimates, effectively setting some coefficients to zero. This feature makes Lasso particularly useful for feature selection in high-dimensional datasets, as it helps in identifying the most important predictors.
+
+Choosing the right value of λ is crucial; a larger λ leads to more regularization and simpler models, while a smaller λ allows for more complexity in the model.

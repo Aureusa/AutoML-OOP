@@ -1,0 +1,36 @@
+**Stock Price Prediction Model**  
+
+This tool uses a machine learning technique called a **Multilayer Perceptron (MLP)** to predict future closing prices of stocks. The goal of this tool is to guide you through setting up a model to make stock predictions based on recent trends in historical data.
+
+**How the Prediction Model Works:**
+
+1. **Trend Extraction**:  
+   First, a simple moving average (SMA) captures the general trend of a stock's price over time. By analyzing this trend, we can isolate the **residuals**—the differences between actual prices and the SMA trend. These residuals represent the short-term price fluctuations around the overall trend.
+
+2. **MLP Model Training**:  
+   The MLP, a type of neural network, is trained on these residuals to understand patterns in the price fluctuations. This model uses optimized parameters (like the number of neurons, learning rate, and batch size) to ensure accurate and efficient predictions. In this case for Apple Inc., the best model setup has:
+ - Single hidden layer with 8 neurons.
+ - Learning rate of 0.0035
+ - Batch size of 3
+
+3. **Making Predictions**:  
+   Using a **sliding window approach**, the model predicts the next few residuals based on the most recent sequence. These residuals are then added to an extrapolation of the trend line. This extrapolation is performed using a simple linear regression on the last **N** prices (**N** is equal to the number of predictions). This allow us to forecast the future stock price. It is advisable that no more than 5 predictions are made, as the bootstrapping caveats of the sliding window approach become too exacerbated.
+
+**Why Use This Model for Prediction?**  
+The stock market is influenced by various unpredictable factors. By focusing on residuals instead of raw prices, this model aims to predict short-term deviations from the trend, which can be helpful for timing investment decisions. While the model cannot account for sudden market events, it provides an informed guess of where the stock might head, based on recent price behavior.
+
+**User Instructions for Model Creation:**
+
+1. **Chose a stock**: Only two choices are implimented, Apple Inc. and Microsfot. The model with the configurations outlined above works best with Apple Inc. stock data.
+   
+2. **Select Model Parameters**: Use the tool's suggestions for model parameters (like the learning rate or neurons), or customize these settings based on your preferences.
+
+3. **Chose a date**: Chose a starting date to create predictions from.
+   
+4. **Run the Prediction**: The model will process the data and generate a short-term forecast of Apple's closing prices.
+
+5. **Analyze the Prediction Output**: The model's output will show projected price points, helping you assess potential price directions.
+
+6. **Compare Prediction Output**: If the provided date plus the days you chose to predict does not surpass the current date, you would be able to see a comparison plot between the actual stock movement and the model's predictions.
+
+This tool serves as an educational tool to demonstrate machine learning in stock predictions. It's not a guaranteed predictor but a model-based estimation tool. Adjust parameters as needed to see different outcomes, and experiment with the settings to understand how each impacts prediction accuracy. 

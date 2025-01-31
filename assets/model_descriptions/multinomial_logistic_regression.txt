@@ -1,0 +1,29 @@
+Multinomial Logistic Regression
+Multinomial logistic regression is an extension of binary logistic regression used for predicting the probabilities of multiple classes or outcomes. It is commonly used in scenarios where the dependent variable is categorical with more than two levels (e.g., classifying types of fruits, customer preferences, etc.).
+
+Key Features of Multinomial Logistic Regression:
+Multiclass Support: Unlike binary logistic regression, which handles two classes, multinomial logistic regression can model three or more classes. It does this by estimating a separate set of coefficients for each class, with one class typically serving as the reference category.
+
+Logit Function: The model uses the softmax function to convert linear combinations of input features into probabilities for each class. The probabilities sum up to 1, making it suitable for categorical outcomes.
+
+Mathematical Formulation: The probability of an observation belonging to class 
+𝑘
+k is modeled as:
+
+P(Y = k | X) = e^(β_k^T X) / Σ(e^(β_j^T X))
+
+Here:
+
+ - P(Y = k | X) is the probability of class k given the feature vector X,
+ - β_k is the coefficient vector for class k,
+ - K is the total number of classes.
+
+Interpretation: The coefficients in multinomial logistic regression represent the change in the log odds of being in a particular class relative to the reference class, for a one-unit change in the predictor variable.
+
+Regularization: Similar to other regression models, regularization techniques (such as L1 or L2 penalties) can be applied to prevent overfitting, especially when dealing with high-dimensional data.
+
+Prediction Process:
+Fit the model on the training data to estimate the coefficients for each class.
+For new observations, calculate the probabilities for each class using the softmax function.
+Assign the class with the highest probability to the observation.
+Multinomial logistic regression is a powerful method for multiclass classification problems and is widely used in fields like marketing, finance, and medical research.

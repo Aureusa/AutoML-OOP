@@ -1,0 +1,17 @@
+K-nearest Neighbors (KNN) Regression
+K-nearest neighbors (KNN) is a non-parametric, instance-based learning algorithm used for both classification and regression tasks. In KNN regression, the output is determined by averaging the values of the K closest neighbors to the input data point.
+
+Key Features of KNN Regression:
+Distance Metric: KNN relies on a distance metric (such as Euclidean distance) to find the nearest neighbors. The choice of distance metric can significantly affect the model's performance.
+
+Choosing K: The parameter K represents the number of neighbors considered. A small value of K can lead to noise sensitivity, while a larger K smooths out predictions but may overlook local patterns.
+
+Non-parametric: KNN makes no explicit assumptions about the underlying data distribution, making it a flexible option for various datasets.
+
+Lazy Learning: KNN is a lazy learner, meaning it does not build a model during training. Instead, it stores the training data and performs computations only when a prediction is requested, which can lead to slower predictions for large datasets.
+
+Prediction Process:
+For a given input, the algorithm calculates the distance to all training samples.
+It identifies the K closest training samples.
+The predicted value is computed as the average of the target values of these K neighbors.
+KNN regression can be sensitive to irrelevant features and the scale of the data. Therefore, it is often recommended to standardize or normalize the features before applying the KNN algorithm.

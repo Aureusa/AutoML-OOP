@@ -1,0 +1,21 @@
+Linear Support Vector Classification (Linear SVC) is a type of support vector machine (SVM) used for classification tasks. It is particularly effective for linearly separable datasets, where classes can be separated by a straight line (or hyperplane in higher dimensions).
+
+Key Features of Linear SVC:
+Hyperplane: Linear SVC finds the optimal hyperplane that separates the data points of different classes. The goal is to maximize the margin, which is the distance between the hyperplane and the nearest data points from either class (these points are called support vectors).
+
+Mathematical Formulation: The decision function of a linear SVC can be expressed as:
+
+f(x) = sign(w^T x + b)
+
+   - w is the weight vector perpendicular to the hyperplane,
+   - b is the bias term,
+   - x is the input feature vector.
+
+Kernel Trick: While Linear SVC is designed for linear classification, it can be extended to non-linear classification using kernel functions. However, when using the linear kernel, it only considers linear relationships.
+
+Efficiency: Linear SVC is computationally efficient and works well for high-dimensional data, making it a popular choice for text classification and other applications with many features.
+
+Prediction Process:
+The algorithm identifies the optimal hyperplane based on the training data.
+For new data points, it predicts the class based on which side of the hyperplane they fall on.
+Linear SVC is robust to outliers and performs well with high-dimensional datasets. It is important to preprocess the data (e.g., scaling features) to achieve better results.

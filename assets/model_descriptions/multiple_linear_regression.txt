@@ -1,0 +1,13 @@
+
+Multiple linear regression is a statistical technique used to model the relationship between one dependent (or response) variable and two or more independent (or predictor) variables. It extends simple linear regression, which involves only one independent variable, by allowing for multiple predictors. The general form of the model is:
+
+    y = β₀ + β₁x₁ + β₂x₂ + ... + βₙxₙ + ε
+
+Here:
+- y is the dependent variable,
+- x₁, x₂, ..., xₙ are the independent variables,
+- β₀ is the intercept,
+- β₁, β₂, ..., βₙ are the coefficients that measure the influence of each predictor on y,
+- ε is the error term (captures the variance in y not explained by the predictors).
+
+The goal is to find the best-fitting line (or hyperplane in higher dimensions) that minimizes the differences between predicted and actual values.
